@@ -2,6 +2,8 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
+import Projects from '../components/Project';
+import Contact from '../components/Contact';
 
 // একটি সাহায্যকারী সেকশন কম্পোনেন্ট
 const Section = ({ id, title, bgColor }) => (
@@ -19,8 +21,8 @@ const HomePage = () => {
 
       <AboutMe></AboutMe>
       <Skills></Skills>
-      <Section id="projects" title="My Projects" bgColor="bg-base-200" />
-      <Section id="contact" title="Contact Me" bgColor="bg-base-100" />
+      <Projects></Projects>
+      <Contact></Contact>
     </div>
   );
 };
