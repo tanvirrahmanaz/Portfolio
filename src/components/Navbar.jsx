@@ -1,43 +1,45 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Assuming you are using react-router-dom for navigation
-import { FaBars, FaTimes } from 'react-icons/fa';
-import './Navbar.css';
+import React from 'react';
+import { Link } from 'react-scroll'; // স্মুথ স্ক্রলিং এর জন্য
+import logo from '../assets/logo.png'; // আপনার লোগো
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const resumeLink = "https://docs.google.com/document/d/1p-4pEeADtmSogOAjDisHHX_qegEweuLkcNTq5cAVGZM/edit?tab=t.0";
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const navLinks = [
-    { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
-    { title: 'Skills', url: '/skills' },
-    { title: 'Projects', url: '/projects' },
-    { title: 'Contact', url: '/contact' },
-  ];
+  const navItems = (
+    <>
+      <li><Link to="about" smooth={true} duration={500} offset={-80} activeClass="active">About</Link></li>
+      <li><Link to="skills" smooth={true} duration={500} offset={-80} activeClass="active">Skills</Link></li>
+      <li><Link to="projects" smooth={true} duration={500} offset={-80} activeClass="active">Projects</Link></li>
+      <li><Link to="contact" smooth={true} duration={500} offset={-80} activeClass="active">Contact</Link></li>
+    </>
+  );
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          Portfolio
+    <div className="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4">
+      <div className="navbar-start">
+        <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+          <img src={logo} alt="Logo" className="h-10 sm:h-12" />
         </Link>
-        <div className="menu-icon" onClick={toggleNavbar}>
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </div>
-        <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
-          {navLinks.map((link, index) => (
-            <li className="nav-item" key={index}>
-              <Link to={link.url} className="nav-links" onClick={toggleNavbar}>
-                {link.title}
-              </Link>
-            </li>
-          ))}
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0 text-base font-semibold">
+          {navItems}
         </ul>
       </div>
-    </nav>
+      <div className="navbar-end">
+        <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm sm:btn-md mr-4 lg:mr-0">
+          Resume
+        </a>
+        <div className="dropdown dropdown-end lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-base font-semibold">
+            {navItems}
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 };
 
