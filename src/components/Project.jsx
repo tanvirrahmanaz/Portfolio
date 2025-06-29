@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Github, Eye, X, Calendar, Users, Code, Star, Heart, Shield, CreditCard, Database, Smartphone } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Github, Eye, X, Calendar, Users, Code, Star, Heart, Shield, CreditCard, Database, Smartphone, Smile } from 'lucide-react';
 import coursephoto1 from '../assets//projects/courseflow/1.png';
 import coursephoto2 from '../assets//projects/courseflow/2.png';
 import coursephoto3 from '../assets//projects/courseflow/3.png';
@@ -12,6 +12,14 @@ import roomphoto2 from '../assets/projects/roommate/2.png';
 import roomphoto3 from '../assets/projects/roommate/3.png';
 import roomphoto4 from '../assets/projects/roommate/4.png';
 import roomphoto5 from '../assets/projects/roommate/5.png';
+
+
+import billpayphoto1 from '../assets/projects/billpay/1.png';
+import billpayphoto2 from '../assets/projects/billpay/2.png';
+import billpayphoto3 from '../assets/projects/billpay/3.png';
+import billpayphoto4 from '../assets/projects/billpay/4.png';
+import billpayphoto5 from '../assets/projects/billpay/5.png';
+
 // Mock project images - Replace with your actual image paths
 const projectImages = {
   courseflow: [
@@ -28,6 +36,13 @@ const projectImages = {
     roomphoto3,
     roomphoto4,
     roomphoto5
+  ],
+  billpay: [
+    billpayphoto1,
+    billpayphoto2,
+    billpayphoto3,
+    billpayphoto4,
+    billpayphoto5
   ]
 };
 
@@ -165,7 +180,69 @@ const projectsData = [
       "Built responsive design that works across all devices",
       "Successfully integrated real-time features for better user experience"
     ]
-  }
+  },
+  {
+  id: 2,
+  title: "BillPay - Bill Payment Application",
+  shortDescription: "A modern web application for managing and paying utility bills with a beautiful UI and smooth user experience.",
+  images: projectImages.billpay, // তুমি তোমার image গুলো যেখানে রাখো সেই অনুযায়ী ঠিক করে নিও
+  liveLink: "https://bill-pay-873f7.web.app/",
+  clientLink: "https://github.com/tanvirrahmanaz/Bill-Pay",
+  category: "Frontend Web Application",
+  duration: "2 weeks",
+  status: "Completed",
+  detailedDescription: "BillPay is a user-friendly bill payment platform that enables users to securely manage and pay their utility bills online. Designed with a clean, responsive UI, it ensures a seamless and efficient experience across all devices.",
+  keyFeatures: [
+    {
+      icon: <Shield className="w-5 h-5" />,
+      title: "Secure Authentication",
+      description: "Firebase authentication using email/password and Google login with protected routes"
+    },
+    {
+      icon: <CreditCard className="w-5 h-5" />,
+      title: "Bill Management",
+      description: "Users can view, filter, and pay bills in real-time with detailed billing history"
+    },
+    {
+      icon: <Calendar className="w-5 h-5" />,
+      title: "Payment History",
+      description: "Track past payments with timestamped records and detailed transaction data"
+    },
+    {
+      icon: <Smartphone className="w-5 h-5" />,
+      title: "Responsive Design",
+      description: "Mobile-first layout with touch-friendly UI and adaptive component behavior"
+    },
+    {
+      icon: <Smile className="w-5 h-5" />,
+      title: "Enhanced UX",
+      description: "Interactive animations, toast notifications, and confetti effects enhance user satisfaction"
+    }
+  ],
+  techStack: [
+    { name: "React", color: "bg-blue-100 text-blue-800" },
+    { name: "React Router DOM", color: "bg-violet-100 text-violet-800" },
+    { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-800" },
+    { name: "DaisyUI", color: "bg-rose-100 text-rose-800" },
+    { name: "Framer Motion", color: "bg-pink-100 text-pink-800" },
+    { name: "Firebase", color: "bg-orange-100 text-orange-800" },
+    { name: "React Hot Toast", color: "bg-yellow-100 text-yellow-800" },
+    { name: "React Icons", color: "bg-slate-100 text-slate-800" }
+  ],
+  challenges: [
+    "Implementing secure and smooth authentication with multiple providers",
+    "Creating a clean, responsive layout with Tailwind & DaisyUI",
+    "Managing real-time state updates for bill status and history",
+    "Providing user feedback with dynamic notifications and animations"
+  ],
+  achievements: [
+    "Deployed with Firebase Hosting ensuring fast global access",
+    "Created an intuitive and responsive design with strong user engagement",
+    "Integrated confetti & toast feedback system to improve user satisfaction",
+    "Developed a simple yet powerful bill filtering and tracking interface"
+  ]
+}
+
 ];
 
 const Projects = () => {
