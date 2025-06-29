@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   
-  const resumeLink = "https://docs.google.com/document/d/1p-4pEeADtmSogOAjDisHHX_qegEweuLkcNTq5cAVGZM/edit?tab=t.0";
+  const resumeLink = "https://drive.google.com/file/d/1NpM0yqDcVOEZVq9c3wqlNI80QHyt-RyV/view";
   
   // Handle scroll effect
   useEffect(() => {

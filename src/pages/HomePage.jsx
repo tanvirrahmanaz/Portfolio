@@ -5,6 +5,7 @@ import Skills from '../components/Skills';
 import Projects from '../components/Project';
 import Contact from '../components/Contact';
 import bgImage from '../assets/bg.jpg';
+import Footer from '../components/Footer';
 
 // একটি সাহায্যকারী সেকশন কম্পোনেন্ট
 
@@ -24,6 +25,7 @@ const HomePage = () => {
       <Skills></Skills>
       <Projects></Projects>
       <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };

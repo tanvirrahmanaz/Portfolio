@@ -23,8 +23,7 @@ const HeroSection = () => {
     { icon: <SiJavascript className="text-2xl text-yellow-500" />, name: "JavaScript" }
   ];
 
-  const resumeLink = "https://docs.google.com/document/d/1p-4pEeADtmSogOAjDisHHX_qegEweuLkcNTq5cAVGZM/edit?tab=t.0";
-
+  const resumeLink = "https://drive.google.com/uc?export=download&id=1NpM0yqDcVOEZVq9c3wqlNI80QHyt-RyV";
   useEffect(() => {
     setIsVisible(true);
     const roleInterval = setInterval(() => {
@@ -161,23 +160,24 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a 
-                href={resumeLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn bg-gradient-to-r from-blue-500 to-purple-600 text-white border-none btn-lg hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-              >
-                📄 Download Resume
-              </a>
-              <button 
-                className="btn border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white btn-lg hover:scale-105 transform transition-all duration-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              >
-                💬 Let's Connect
-              </button>
-            </div>
+          {/* CTA Buttons */}
+<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+  <a 
+    href={resumeLink} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    download="Tanvir_Rahman_Resume.pdf" // এই download অ্যাট্রিবিউটটি যোগ করা হয়েছে
+    className="btn bg-gradient-to-r from-blue-500 to-purple-600 text-white border-none btn-lg hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+  >
+    📄 Download Resume
+  </a>
+  <button 
+    className="btn border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white btn-lg hover:scale-105 transform transition-all duration-300"
+    onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+  >
+    💬 Let's Connect
+  </button>
+</div>
           </div>
         </div>
       </div>
