@@ -18,6 +18,19 @@ const Navbar = () => {
 
   const navItems = (
     <>
+    <li>
+        <Link 
+          to="home" 
+          smooth={true} 
+          duration={500} 
+          offset={-80} 
+          activeClass="active"
+          className="relative px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 hover:text-blue-400 cursor-pointer group text-gray-100"
+        >
+          Home
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+      </li>
       <li>
         <Link 
           to="about" 
@@ -145,6 +158,16 @@ const Navbar = () => {
                   className="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl rounded-2xl w-64 border bg-gray-800 border-gray-700 backdrop-blur-md"
                 >
                   <li>
+                     <Link 
+                      to="home" 
+                      smooth={true} 
+                      duration={500} 
+                      offset={-80} 
+                      activeClass="active"
+                      className="px-4 py-3 text-base font-medium rounded-xl hover:bg-gray-700 hover:text-blue-400 transition-all duration-300 text-gray-100"
+                    >
+                      Home 
+                    </Link>
                     <Link 
                       to="about" 
                       smooth={true} 

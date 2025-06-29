@@ -92,14 +92,14 @@ const Skills = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600  mx-auto rounded-full"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={categoryIndex} 
-              className={`border border-gray-700 rounded-xl p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-500 transform hover:-translate-y-2 ${
+              className={`border border-gray-700 rounded-xl p-6 hover:border-blue-600 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-500 transform hover:-translate-y-2 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{
